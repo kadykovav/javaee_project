@@ -1,0 +1,125 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd">
+        <web-app>
+        <display-name>Archetype Created Web Application</display-name>
+        <servlet>
+        <servlet-name>org.example.servlets.MainServlet</servlet-name>
+        <servlet-class>org.example.servlets.MainServlet</servlet-class>
+
+        </servlet>
+
+        <servlet-mapping>
+                <servlet-name>org.example.servlets.MainServlet</servlet-name>
+                <url-pattern>/</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>AddExecutor</servlet-name>
+                <servlet-class>org.example.servlets.AddExecutor</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>AddExecutor</servlet-name>
+                <url-pattern>/executors/add</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>ListExecutor</servlet-name>
+                <servlet-class>org.example.servlets.ListExecutor</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>ListExecutor</servlet-name>
+                <url-pattern>/executors</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>DeleteExecutor</servlet-name>
+                <servlet-class>org.example.servlets.DeleteExecutor</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>DeleteExecutor</servlet-name>
+                <url-pattern>/executors/delete</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>EditExecutor</servlet-name>
+                <servlet-class>org.example.servlets.EditExecutor</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>EditExecutor</servlet-name>
+                <url-pattern>/executors/edit</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>ListAlbum</servlet-name>
+                <servlet-class>org.example.servlets.ListAlbum</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>ListAlbum</servlet-name>
+                <url-pattern>/albums</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>AddAlbum</servlet-name>
+                <servlet-class>org.example.servlets.AddAlbum</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>AddAlbum</servlet-name>
+                <url-pattern>/albums/add</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>DeleteAlbum</servlet-name>
+                <servlet-class>org.example.servlets.DeleteAlbum</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>DeleteAlbum</servlet-name>
+                <url-pattern>/albums/delete</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>EditAlbum</servlet-name>
+                <servlet-class>org.example.servlets.EditAlbum</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>EditAlbum</servlet-name>
+                <url-pattern>/albums/edit</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>ListComposition</servlet-name>
+                <servlet-class>org.example.servlets.ListComposition</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>ListComposition</servlet-name>
+                <url-pattern>/compositions</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>AddComposition</servlet-name>
+                <servlet-class>org.example.servlets.AddComposition</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>AddComposition</servlet-name>
+                <url-pattern>/compositions/add</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>DeleteComposition</servlet-name>
+                <servlet-class>org.example.servlets.DeleteComposition</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>DeleteComposition</servlet-name>
+                <url-pattern>/compositions/delete</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+                <servlet-name>EditComposition</servlet-name>
+                <servlet-class>org.example.servlets.EditComposition</servlet-class>
+        </servlet>
+        <servlet-mapping>
+                <servlet-name>EditComposition</servlet-name>
+                <url-pattern>/compositions/edit</url-pattern>
+        </servlet-mapping>
+
+        </web-app>
