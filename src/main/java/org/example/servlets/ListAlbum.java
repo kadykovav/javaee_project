@@ -18,7 +18,6 @@ public class ListAlbum extends javax.servlet.http.HttpServlet{
         AlbumService albumService = new AlbumService();
         List<Album> listAlbums = albumService.getAllAlbums();
 
-
         RequestDispatcher dispatcher = req.getRequestDispatcher("/Album.jsp");
         req.setAttribute("albums",listAlbums);
         dispatcher.forward(req,resp);
