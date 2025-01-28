@@ -19,18 +19,15 @@ public class ListExecutorsAjax extends javax.servlet.http.HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ExecutorService executorService = new ExecutorService();
-//
-//        List<Executor> listExecutors = executorService.getAllExecutors();
-        //
+
         request.setCharacterEncoding("UTF-8");
         String query = request.getParameter("query");
 
         List<Executor> listExecutors = executorService.findExecutors(query);
-        //
+    
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(listExecutors);
 
