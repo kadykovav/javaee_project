@@ -22,7 +22,6 @@ public class Composition {
     @JoinColumn(name = "album_id", referencedColumnName = "id", nullable = false)
     private Album album;
 
-
     public Long getId() {
         return id;
     }
