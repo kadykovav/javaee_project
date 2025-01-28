@@ -19,7 +19,6 @@ public class Executor {
     @OneToMany(mappedBy = "executor", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Album> albums;
 
-
     public Long getId(){
         return id;
     }
