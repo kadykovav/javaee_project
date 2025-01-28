@@ -15,7 +15,5 @@
         <mapping class="org.catalog.model.Album"/>
         <mapping class="org.catalog.model.Composition"/>
 
-
-
     </session-factory>
 </hibernate-configuration>
