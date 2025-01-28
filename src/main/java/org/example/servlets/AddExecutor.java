@@ -16,9 +16,7 @@ public class AddExecutor extends javax.servlet.http.HttpServlet{
         dispatcher.forward(req, resp);
     }
 
-
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         req.setCharacterEncoding("UTF-8");
         String name = req.getParameter("name");
 
