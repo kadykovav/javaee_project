@@ -11,26 +11,24 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ExecutorService {
-//
-public Executor getExecutorByName(String name) {
-    try (Session session = HibernateUtil.getSession()) {
-        Query<Executor> query = session.createQuery(
-                "FROM Executor WHERE name = :name", Executor.class
-        );
-        query.setParameter("name", name);
-        return query.uniqueResult();
-    }
-}
-//
 
-    //
+    public Executor getExecutorByName(String name) {
+        try (Session session = HibernateUtil.getSession()) {
+            Query<Executor> query = session.createQuery(
+                "FROM Executor WHERE name = :name", Executor.class
+            );
+            query.setParameter("name", name);
+            return query.uniqueResult();
+        }
+    }
+
     public List<Executor> findExecutors(String prefix) {
         List<Executor> allExecutors = getAllExecutors();
         return allExecutors.stream()
                 .filter(executor -> executor.getName().toLowerCase().startsWith(prefix.toLowerCase()))
                 .collect(Collectors.toList());
     }
-    //
+    
     public List<Executor> getAllExecutors() {
         try (Session session = HibernateUtil.getSession()) {
             Query<Executor> query = session.createQuery("from Executor", Executor.class);
@@ -38,13 +36,13 @@ public Executor getExecutorByName(String name) {
         }
     }
 
-    public Executor getExecutorById(Long id){//read
+    public Executor getExecutorById(Long id){
         try(Session session = HibernateUtil.getSession()) {
             return session.get(Executor.class, id);
         }
     }
 
-    public void addExecutor(Executor executor){//create
+    public void addExecutor(Executor executor){
         Transaction transaction = null;
         try(Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
@@ -52,6 +50,7 @@ public Executor getExecutorByName(String name) {
             transaction.commit();
         }
     }
+
     public void updateExecutor(Executor executor){
         Transaction transaction = null;
         try(Session session = HibernateUtil.getSession()) {
@@ -60,6 +59,7 @@ public Executor getExecutorByName(String name) {
             transaction.commit();
         }
     }
+    
     public void deleteExecutor(Long id){
         Transaction transaction = null;
         try(Session session = HibernateUtil.getSession()) {
@@ -71,6 +71,4 @@ public Executor getExecutorByName(String name) {
             transaction.commit();
         }
     }
-
-
 }
