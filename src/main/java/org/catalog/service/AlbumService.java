@@ -7,8 +7,6 @@ import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-
-
 import java.util.List;
 
 public class AlbumService {
@@ -23,6 +21,7 @@ public class AlbumService {
             return albums;
         }
     }
+    
     public Album getAlbumById(Long id){//read
         try(Session session = HibernateUtil.getSession()) {
             Album album = session.get(Album.class, id);
@@ -39,6 +38,7 @@ public class AlbumService {
             transaction.commit();
         }
     }
+    
     public void updateAlbum(Album album){//create
         Transaction transaction = null;
         try(Session session = HibernateUtil.getSession()) {
@@ -47,6 +47,7 @@ public class AlbumService {
             transaction.commit();
         }
     }
+    
     public void deleteAlbum(Long id){//create
         Transaction transaction = null;
         try(Session session = HibernateUtil.getSession()) {
