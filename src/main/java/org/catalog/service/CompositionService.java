@@ -7,7 +7,6 @@ import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-
 import java.util.List;
 
 public class CompositionService {
@@ -39,6 +38,7 @@ public class CompositionService {
             transaction.commit();
         }
     }
+    
     public void updateComposition(Composition composition){//create
         Transaction transaction = null;
         try(Session session = HibernateUtil.getSession()) {
@@ -47,6 +47,7 @@ public class CompositionService {
             transaction.commit();
         }
     }
+    
     public void deleteComposition(Long id){//create
         Transaction transaction = null;
         try(Session session = HibernateUtil.getSession()) {
