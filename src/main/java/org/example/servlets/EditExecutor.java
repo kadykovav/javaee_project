@@ -20,7 +20,6 @@ public class EditExecutor extends javax.servlet.http.HttpServlet{
         dispatcher.forward(req,resp);
     }
 
-
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         Long id = Long.parseLong(req.getParameter("id"));
