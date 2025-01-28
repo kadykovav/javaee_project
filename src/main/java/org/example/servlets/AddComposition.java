@@ -15,9 +15,8 @@ import java.io.IOException;
 import java.util.List;
 
 public class AddComposition extends javax.servlet.http.HttpServlet{
-
+    
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         AlbumService albumService = new AlbumService();
         List<Album> albumList = albumService.getAllAlbums();
 
@@ -25,9 +24,7 @@ public class AddComposition extends javax.servlet.http.HttpServlet{
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/AddComposition.jsp");
         dispatcher.forward(req, resp);
-
     }
-
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
